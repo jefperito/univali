@@ -10,7 +10,7 @@ public class CadastroPessoa {
 
     public Pessoa buscarPessoaPeloId(Long id) {
         if (id == null || id == 0) {
-            throw new IllegalStateException("Pessoa não possui nome");
+            throw new IllegalStateException("ID inválido");
         }
 
         Pessoa pessoa = (Pessoa) database.buscaPeloId(id, "pessoa");
@@ -18,5 +18,17 @@ public class CadastroPessoa {
         System.out.println("Pessoa pelo ID: " + pessoa.getId() + " buscada no banco de dados.");
 
         return pessoa;
+    }
+
+    public void salvar(Pessoa pessoa) {
+        if (pessoa == null) {
+            throw new IllegalStateException("Pessoa está nula");
+        }
+
+        if (pessoa.getId() == 0) {
+            database.insere(pessoa);
+        } else {
+            database.atualiza(pessoa);
+        }
     }
 }
