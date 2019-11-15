@@ -6,7 +6,7 @@ import org.junit.Test;
 public class CalculadoraTest {
 
     @Test
-    public void deveSomarDoisNumerosInteiros() {
+    public void deveSomarDoisNumerosInteirosPositivos() {
         Assert.assertEquals(2, new Calculadora().soma(1, 1));
     }
 }
