@@ -14,7 +14,7 @@ public class Database {
         throw new RuntimeException("Método real foi executado :(");
     }
 
-    public Object buscaPeloId(Long id, Class<?> clazz) {
+    public Object buscaPeloId(Long id, String tabela) {
         throw new RuntimeException("Método real foi executado :(");
     }
 }

@@ -5,6 +5,12 @@ public class Pessoa {
     private String nome;
     private int idade;
 
+    public Pessoa() {}
+
+    public Pessoa(long id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }

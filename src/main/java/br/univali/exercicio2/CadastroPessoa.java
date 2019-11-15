@@ -13,7 +13,7 @@ public class CadastroPessoa {
             throw new IllegalStateException("Pessoa não possui nome");
         }
 
-        Pessoa pessoa = (Pessoa) database.buscaPeloId(id, Pessoa.class);
+        Pessoa pessoa = (Pessoa) database.buscaPeloId(id, "pessoa");
 
         System.out.println("Pessoa pelo ID: " + pessoa.getId() + " buscada no banco de dados.");
 
