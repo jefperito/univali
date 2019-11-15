@@ -1,5 +1,16 @@
 package br.univali.exercicio2;
 
+/**
+ * Para criar um mock, usamos a biblioteca Mockito. conforme definido abaixo:
+ * <Classe do objeto que vai ser mockada /> objeto = Mockito.mock(<Classe do objeto que vai ser mockada>)
+ *
+ * Caso queremos simular um comportamento de um método do mock, utilizamos a maneira abaixo:
+ * Mockito.when(objeto.metodoQueVaiSerSimulado(parametros).thenReturn(objeto que queremos que retorne)
+ *
+ * Caso queremos checar iterações do mock (spy), usamos o seguinte:
+ *
+ * Mockito.verify(mock, Mockito.times(<quantidade de iteracoes>)).metodoQueQueremosChecarAQuantidadeDeIteracoes()
+ */
 public class CadastroPessoa {
 
     private final Database database;
