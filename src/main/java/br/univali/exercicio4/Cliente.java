@@ -34,15 +34,15 @@ public class Cliente {
                 case Filme.NORMAL:
                     vl += 1.5;
                     if (aluguel.getDiasAluguel() > 3)
-                        vl += (aluguel.getDiasAluguel() - 3) * 1.5;
+                        vl += (aluguel.getDiasAluguel() - 3) * new APITabelaDePreco().getValorFilmeNormal();
                     break;
                 case Filme.INFANTIL:
                     vl += 2;
                     if (aluguel.getDiasAluguel() > 2)
-                        vl += (aluguel.getDiasAluguel() - 2) * 1.5;
+                        vl += (aluguel.getDiasAluguel() - 2) * new APITabelaDePreco().getValorFilmeInfantil();
                     break;
                 case Filme.LANCAMENTO:
-                    vl += aluguel.getDiasAluguel() * 3;
+                    vl += aluguel.getDiasAluguel() * new APITabelaDePreco().getValorFilmeLancamento();
                     break;
             }
 
