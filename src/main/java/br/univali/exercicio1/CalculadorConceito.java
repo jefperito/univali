@@ -18,6 +18,15 @@ public class CalculadorConceito {
      *  OBS 2: não deve permitir nota acima de 10.
      */
     public char calculaConceitoBaseadoNaNota(double nota) {
+        if (nota < 0) {
+            throw new IllegalArgumentException("Nota abaixo de zero");
+        }
+        if (nota > 10) {
+            throw new IllegalArgumentException("Nota acima de 10");
+        }
+        if (nota > 9) {
+            return 'A';
+        }
         throw new NotImplementedException();
     }
 }
